@@ -12,6 +12,8 @@ server.use(cors())
 
 server.use([authRouter, recordsRouter])
 
-server.listen(5000, () => {
-  console.log('Servidor deu bom!!!')
+const port = process.env.PORT || 5000
+
+server.listen(port, () => {
+  console.log(`Server running in port: ${port}`)
 })
